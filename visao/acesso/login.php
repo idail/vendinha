@@ -70,14 +70,14 @@
                       <label for="yourUsername" class="form-label">Nome de usuário</label>
                       <div class="input-group has-validation">
                         <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
-                        <input type="text" name="login-usuario-autenticacao" id="login-usuario-autenticacao" class="form-control" placeholder="admin" required value="admin">
+                        <input type="text" name="login-usuario-autenticacao" id="login-usuario-autenticacao" class="form-control" placeholder="admin" required>
 
                       </div>
                     </div>
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Senha</label>
-                      <input type="password" name="senha-usuario-autenticacao" id="senha-usuario-autenticacao" class="form-control" placeholder="123" required value="123">
+                      <input type="password" name="senha-usuario-autenticacao" id="senha-usuario-autenticacao" class="form-control" placeholder="123" required>
 
                     </div>
 
