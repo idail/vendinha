@@ -21,6 +21,22 @@ if($_SERVER["REQUEST_METHOD"] === "POST")
         }else{
             echo json_encode("Favor preencher os campos");
         }
+    }else if($recebeProcessoProduto === "recebe_alterar_produto")
+    {
+        if($_POST["valor_metodo"] === "PUT")
+        {
+            $recebeNomeProdutoAlterar = $_POST["nome-produto-alterar"];
+            $recebeValorProdutoAlterar = $_POST["valor_produto_numerico_alterar"];
+            $recebeCodigoProdutoAlterar = $_POST["codigo-produto-alterar"];
+
+            if(!empty($recebeNomeProdutoAlterar) && !empty($recebeValorProdutoAlterar))
+            {
+                $resultadoAlterarProduto = $produtoControladora->AlterarProdutoEspecifico($recebeCodigoProdutoAlterar,$recebeNomeProdutoAlterar,$recebeValorProdutoAlterar);
+                echo json_encode($resultadoAlterarProduto);
+            }else{
+                echo json_encode("Favor preencher os campos");
+            }
+        }
     }
 }else if($_SERVER["REQUEST_METHOD"] === "GET")
 {

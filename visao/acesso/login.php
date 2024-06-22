@@ -56,11 +56,11 @@
               </div><!-- End Logo -->
 
               <div class="card mb-3">
-
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
                     <h5 class="card-title text-center pb-0 fs-4">Faça login na sua conta</h5>
+                    
                     <!-- <p class="text-center small">Entre com seu usuário e senha</p> -->
                   </div>
 
@@ -86,20 +86,20 @@
                     </div>
                   </form>
 
-                  <div class="col-12">
+                  <div class="col-12 mt-4">
                     <div class="alert alert-success bg-success text-light border-0 alert-dismissible fade show" id="recebe-mensagem-autenticacao-realizado-usuario" role="alert">
                       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                   </div>
 
 
-                  <div class="col-12">
+                  <div class="col-12 mt-4">
                     <div class="alert alert-warning bg-warning border-0 alert-dismissible fade show" id="recebe-mensagem-campo-vazio-login" role="alert">
                       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                   </div>
 
-                  <div class="col-12">
+                  <div class="col-12 mt-4">
                     <div class="alert alert-warning bg-warning border-0 alert-dismissible fade show" id="recebe-mensagem-campo-falha-autentica-usuario" role="alert">
                       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>

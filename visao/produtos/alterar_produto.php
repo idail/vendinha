@@ -60,7 +60,7 @@
                             <div class="row mb-3">
                                 <div class="col-sm-10">
                                     <button type="button" class="btn btn-primary" id="alterar-produto">Alterar</button>
-                                    <button type="reset" class="btn btn-secondary" id="limpar-campos-alterar-produto">Limpar</button>
+                                    <button type="reset" class="btn btn-secondary">Limpar</button>
                                 </div>
                             </div>
 
@@ -78,6 +78,12 @@
 
                             <div class="col-12">
                                 <div class="alert alert-warning bg-warning border-0 alert-dismissible fade show" id="recebe-mensagem-campo-falha-alterar-produto" role="alert">
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="alert alert-warning bg-warning border-0 alert-dismissible fade show" id="recebe-mensagem-campo-falha-carregar-dados-produto" role="alert">
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
                             </div>

@@ -80,3 +80,28 @@ $("#autenticacao-usuario").click(function (e) {
     $("#recebe-mensagem-campo-vazio-login").fadeOut(4000);
   }
 });
+
+$("#sair").click(function (e) {
+  e.preventDefault();
+  debugger;
+  $.ajax({
+    url: "../api/UsuarioAPI.php",
+    dataType: "json",
+    type: "post",
+    data: { processo_usuario: "deslogar" },
+    success: function (retorno) {
+      debugger;
+      if (retorno == "Deslogado com sucesso") {
+        var url_login = "../";
+        $(window.document.location).attr("href", url_login);
+      }
+    },
+    error: function (xhr, status, error) {
+      $("#recebe-mensagem-campo-falha-autentica-usuario").html(
+        "Falha ao autenticar:" + error
+      );
+      $("#recebe-mensagem-campo-falha-autentica-usuario").show();
+      $("#recebe-mensagem-campo-falha-autentica-usuario").fadeOut(4000);
+    },
+  });
+});

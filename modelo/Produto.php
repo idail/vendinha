@@ -60,7 +60,26 @@ class Produto implements ProdutoInterface{
 
     public function AlterarProduto(): bool
     {
-        return true;
+        try{
+            if(!empty($this->getCodigo_Produto()) && !empty($this->getNome_Produto()))
+            {
+                $instrucaoAlterarProdutoEspecifico = "update produto set nome_produto = :recebe_nome_produto_alterar,valor_produto = :recebe_valor_produto_alterar where codigo_produto = :recebe_codigo_produto_alterar";
+                $comandoAlterarProdutoEspecifico = Conexao::Obtem()->prepare($instrucaoAlterarProdutoEspecifico);
+                $comandoAlterarProdutoEspecifico->bindValue(":recebe_nome_produto_alterar",$this->getNome_Produto());
+                $comandoAlterarProdutoEspecifico->bindValue(":recebe_valor_produto_alterar",$this->getValor_Produto());
+                $comandoAlterarProdutoEspecifico->bindValue(":recebe_codigo_produto_alterar",$this->getCodigo_Produto());
+
+                $resultadoAlterarProdutoEspecifico = $comandoAlterarProdutoEspecifico->execute();
+
+                return $resultadoAlterarProdutoEspecifico;
+            }
+        }catch (PDOException $exception) {
+            $recebe_erro =  $exception->getMessage();
+            return $recebe_erro;
+        } catch (Exception $excecao) {
+            $recebe_erro =  $excecao->getMessage();
+            return $recebe_erro;
+        }
     }
 
     public function ExcluirProduto(): bool

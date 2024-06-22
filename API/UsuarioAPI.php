@@ -22,6 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }else{
             echo json_encode("Favor verificar os dados preenchidos");
         }
+    }elseif ($recebeProcessoUsuario == "deslogar") {
+
+        $resultado_DeslogarUsuario = $usuarioControladora->DeslogarUsuario();
+
+        echo json_encode($resultado_DeslogarUsuario);
     }
 }
 ?>

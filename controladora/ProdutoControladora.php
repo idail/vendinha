@@ -42,5 +42,16 @@ class ProdutoControladora{
 
         return $resultadoConsultaProdutoEspecifico;
     }
+
+    public function AlterarProdutoEspecifico($recebeCodigoProdutoAlterar,$recebeNomeProdutoAlterar,$recebeValorProdutoAlterar)
+    {
+        $this->produto->setCodigo_Produto($recebeCodigoProdutoAlterar);
+        $this->produto->setNome_Produto($recebeNomeProdutoAlterar);
+        $this->produto->setValor_Produto($recebeValorProdutoAlterar);
+
+        $resultadoAlterarProduto = $this->produto->AlterarProduto();
+
+        return $resultadoAlterarProduto;
+    }
 }
 ?>

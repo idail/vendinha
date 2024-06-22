@@ -18,5 +18,14 @@ class UsuarioControladora{
 
         return $resultadoValidarUsuario;
     }
+
+    public function DeslogarUsuario()
+    {
+        session_destroy();
+        
+        $recebe_sessao_usuario_deslogado = "Deslogado com sucesso";
+        
+        return $recebe_sessao_usuario_deslogado;
+    }
 }
 ?>
